@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List & Pomodoro</title>
+    <title>ToDo List & Timer</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/57dc925260.js" crossorigin="anonymous"></script>
 </head>
@@ -11,19 +11,37 @@
     <div class="container">
         <span class="js-weather"></span>
         <div class="js-clock">
-            <h1 class="time hide">00:00:00</h1>
-            <h1 class="pomodoro hide">00:00:00</h1>
-            <button><i class="fas fa-ellipsis-h"></i></button>
+            <h2 class="time">00:00:00</h2>
+
+            <div class="js-pomodoro hide">
+                <form action="#" class="js-pomodoroForm">
+                    <input id="minute" type="number" min="0" max="180" value="25">
+                    <label for="minute">min</label>
+                    <input type="submit" value="start">
+                </form>
+                <div class="hide">
+                    <h2 class="timer">00:00:00</h2>
+                    <button class="stop_timer"><i class="fas fa-stop-circle"></i></button>
+                </div>
+            </div>
+
+            <button class="pomodoro_toggle" title="타이머on/off"><i class="fas fa-stopwatch"></i></button>
         </div>
+
         <form action="#" class="js-nameForm">
-            <input type="text" placeholder="What is your name?">
+            <input type="text" placeholder="What is your name?" required>
         </form>
-        <h4 class="js-greetings"></h4>
+        <h4 class="js-greetings hide"></h4>
         <form action="#" class="js-toDoForm">
-            <input type="text" placeholder="Write a to do">
+            <input type="text" placeholder="Write a to do" required>
         </form>
         <ul class="js-toDoList">
         </ul>
+        
+        <div class="bgDark">
+            <i class="fas fa-sun"></i>
+            <input type="range" min="50" max="100" step="5" value="100"></input>
+        </div>
     </div>
     <script src="clock.js"></script>
     <script src="gretting.js"></script>
