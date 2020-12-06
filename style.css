@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap");
+
+* {
+    margin: 0;
+}
+
+input[type="text"],
+input[type="number"] {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    width: 450px;
+    height: 45px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+input[type="number"] {
+    padding: 10px 10px;
+    width: 70px;
+}
+
+input[type="submit"] {
+    margin-left: 20px;
+    width: 70px;
+    height: 45px;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 500;
+    color: #2e2b32;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #ecf0f1;
+}
+
+input[type="submit"]:active {
+    background-color: #fff;
+}
+
+input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+input::placeholder {
+    color: #2e2b32;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+button {
+    margin-right: 10px;
+    font-family: inherit;
+    font-size: 1em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    color: #ecf0f1;
+    background-color: #2c3e50;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.js-weather {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.js-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+    min-width: 500px;
+}
+
+.time,
+.timer {
+    font-family: "Lobster", cursive;
+    font-size: 8em;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: #2e2b32 1px 1px, #2e2b32 2px 2px, #2e2b32 3px 3px,
+        #2e2b32 4px 4px, #2e2b32 5px 5px, #2e2b32 6px 6px, #2e2b32 7px 7px,
+        #2e2b32 8px 8px, #2e2b32 9px 9px, #2e2b32 10px 10px, #2e2b32 11px 11px,
+        #2e2b32 12px 12px, #2e2b32 13px 13px, #2e2b32 14px 14px,
+        #2e2b32 15px 15px, #2e2b32 16px 16px, #2e2b32 17px 17px,
+        #2e2b32 18px 18px, #2e2b32 19px 19px, #2e2b32 20px 20px,
+        #2e2b32 21px 21px, #2e2b32 22px 22px, #2e2b32 23px 23px,
+        #2e2b32 24px 24px, #2e2b32 25px 25px, #2e2b32 26px 26px,
+        #2e2b32 27px 27px, #2e2b32 28px 28px, #2e2b32 29px 29px;
+}
+
+.pomodoro_toggle {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+}
+
+.js-pomodoro .stop_timer {
+    position: absolute;
+    top: 80%;
+    left: -10%;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+}
+
+h4 {
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.js-toDoForm {
+    margin-bottom: 10px;
+}
+
+li span {
+    font-size: 1.6em;
+    margin-right: 10px;
+}
+
+.bgDark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
